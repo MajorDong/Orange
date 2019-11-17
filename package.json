@@ -1,0 +1,23 @@
+{
+  "name": "orange",
+  "version": "0.0.1",
+  "description": "一个Vue的UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MajorDong/Orange.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "MajorDong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MajorDong/Orange/issues"
+  },
+  "homepage": "https://github.com/MajorDong/Orange#readme"
+}
