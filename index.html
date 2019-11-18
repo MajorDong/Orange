@@ -11,9 +11,25 @@
       padding: 0;
       box-sizing: border-box;
     }
+    :root{
+      --button-height: 32px;
+      --button-size: 14px;
+      --button-bg: white;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: #666;
+    }
+    #app {
+      margin: 20px
+    }
   </style>
 </head>
 <body>
-  
+  <div id="app">
+    <g-button></g-button>
+  </div>
+  <script src="./src/app.js"></script>
 </body>
 </html>
