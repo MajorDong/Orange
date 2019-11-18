@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MajorDong/Orange/issues"
   },
-  "homepage": "https://github.com/MajorDong/Orange#readme"
+  "homepage": "https://github.com/MajorDong/Orange#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
