@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Orange</title>
   <style>
-    *{
-      margin: 0; 
+    * {
+      margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    :root{
+
+    :root {
       --button-height: 32px;
       --button-size: 14px;
       --button-bg: white;
@@ -21,15 +23,30 @@
       --border-color: #999;
       --border-color-hover: #666;
     }
+
     #app {
       margin: 20px
     }
+    .icon{
+      width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+
   </style>
 </head>
+
 <body>
   <div id="app">
-    <g-button></g-button>
+    <g-button>按钮</g-button>
+    <g-button icon="settings" icon-position="right">
+      按钮
+    </g-button>
+    <g-button icon="settings">按钮</g-button>
   </div>
   <script src="./src/app.js"></script>
+  <script src="//at.alicdn.com/t/font_1518337_y8w2rxnkird.js"></script>
 </body>
+
 </html>
