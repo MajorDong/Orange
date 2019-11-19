@@ -1,8 +1,7 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-    <svg class="icon" v-if="icon">
-        <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+  <button class="o-button" :class="{[`icon-${iconPosition}`]: true}">
+    <o-icon class="icon" v-if="icon" :name="icon"></o-icon>
+    <o-icon name="loading"></o-icon>
     <!-- 插槽上不能添加clss -->
     <div class="content">
          <slot><slot> 
@@ -14,7 +13,7 @@
 export default {
   //props:['icon','iconPosition']
   props: {
-    icon: {},
+    icon: '',
     iconPosition: {
       type:String,
       default: 'left',
@@ -31,7 +30,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.g-button {
+
+.o-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
