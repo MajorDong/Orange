@@ -1,7 +1,7 @@
 <template>
   <button class="o-button" :class="{[`icon-${iconPosition}`]: true}">
     <o-icon class="icon" v-if="icon" :name="icon"></o-icon>
-    <o-icon name="loading"></o-icon>
+    <o-icon class="loading" name="loading"></o-icon>
     <!-- 插槽上不能添加clss -->
     <div class="content">
          <slot><slot> 
@@ -30,7 +30,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+.loading{
+  animation: spin 2s infinite linear;
+}
 .o-button {
   display: inline-flex;
   justify-content: center;
