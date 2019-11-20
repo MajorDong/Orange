@@ -25,7 +25,10 @@ export default {
   vertical-align: middle;
   > .o-button {
     border-radius: 0;
-    margin-left: -1px; //前一个border被后一个挡住了
+    &:not(:first-child){
+      margin-left: -1px; //前一个border被后一个挡住了
+    }
+    
     &:first-child{
       border-top-left-radius: var(--border-radius);
       border-bottom-left-radius: var(--border-radius)
