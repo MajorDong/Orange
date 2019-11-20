@@ -1,7 +1,7 @@
 <template>
-  <button class="o-button" :class="{[`icon-${iconPosition}`]: true}">
-    <o-icon class="icon" v-if="icon" :name="icon"></o-icon>
-    <o-icon class="loading" name="loading"></o-icon>
+  <button class="o-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+    <o-icon class="icon" v-if="icon && !loading" :name=icon></o-icon>
+    <o-icon v-if="loading" class="loading icon" name="loading"></o-icon>
     <!-- 插槽上不能添加clss -->
     <div class="content">
          <slot><slot> 
@@ -14,6 +14,10 @@ export default {
   //props:['icon','iconPosition']
   props: {
     icon: '',
+    loading: {
+      type: Boolean,
+      default: false,
+    },
     iconPosition: {
       type:String,
       default: 'left',
@@ -24,7 +28,8 @@ export default {
           return true
         }
       }
-    }
+    },
+   
   }
 };
 </script>
@@ -41,7 +46,7 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  vertical-align:middle;
+  vertical-align:middle; //外部对齐
   font-size: var(--font-size);
   height: var(--button-height);
   padding: 0 0.6em;

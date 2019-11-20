@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="" type="image/x-icon">
   <title>Orange</title>
   <style>
     * {
@@ -34,9 +35,9 @@
 
 <body>
   <div id="app">
-    <o-button>按钮</o-button>
-    <o-button icon="settings" >按钮</o-button>
-    <o-button icon="settings" icon-position="right">
+    <o-button :loading="loading1" @click='loading1 = !loading1'>按钮</o-button>
+    <o-button icon="settings" :loading="loading2" @click='loading2 = !loading2'>按钮</o-button>
+    <o-button icon="settings" icon-position="right" :loading="loading3" @click='loading3 = !loading3'>
       按钮
     </o-button>
   </div>
