@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .o-button-group{
   display: inline-flex;
   justify-content: center;

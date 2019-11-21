@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .o-icon{
       width: 1em; height: 1em;
        vertical-align: -0.15em;
