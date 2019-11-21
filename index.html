@@ -40,7 +40,11 @@
         <o-input value="normal"></o-input>
         <o-input value="readonly" readonly></o-input>
         <o-input value="disabled" disabled></o-input>
-        <o-input value="error" error="Error message"></o-input>
+        <o-input value="error" error="Error message" @change="inputchange"></o-input>
+    </div>
+    <div class="box">
+      <o-input v-model="message"></o-input>
+      <p style="margin-top: 5px;">{{message}}</p>
     </div>
     <div class="box">
       <o-button :loading="loading1" @click='loading1 = !loading1'>按钮</o-button>
