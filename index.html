@@ -37,7 +37,7 @@
 <body>
   <div id="app">
     <div class="box">
-      <o-row>
+      <o-row gutter="20">
         <o-col span="2">1</o-col>
         <o-col span="22">2</o-col>
       </g-row>
@@ -45,10 +45,10 @@
 
 
     <div class="box">
-        <o-input value="normal"></o-input>
-        <o-input value="readonly" readonly></o-input>
-        <o-input value="disabled" disabled></o-input>
-        <o-input value="error" error="Error message" @change="inputchange"></o-input>
+        <o-input value="NORMAL"></o-input>
+        <o-input value="READONLY" readonly></o-input>
+        <o-input value="DISABLED" disabled></o-input>
+        <o-input value="ERROR" error="Error message" @change="inputchange"></o-input>
     </div>
     <div class="box">
       <o-input v-model="message"></o-input>
