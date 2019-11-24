@@ -16,7 +16,9 @@ export default {
     },
     gutter:{
       type: [Number,String]
-    }
+    },
+    //:phone="{span:12, offset:2}"
+   
   },
   data(){
     return{
@@ -44,7 +46,7 @@ export default {
   height: 100px;
   background: gray;
   width: 50%;
-  border: 1px solid red;
+  
 
   $class-prefix: col-;
   @for $n from 1 through 24 {
