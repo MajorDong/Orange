@@ -31,11 +31,34 @@
     .box{
       margin: 20px;
     }
+    .demo{
+      border: 1px solid red;
+      min-height: 100px;
+    }
   </style>
 </head>
 
 <body>
   <div id="app">
+    <div class="box">
+      <o-layout style="height: 100vh;">
+        <o-header class="demo">header</o-header>
+        <o-content class="demo">content</o-content>
+        <o-footer class="demo">footer</o-footer>
+      </o-layout>
+    </div>
+
+    <div class="box">
+        <o-layout style="height: 100vh;">
+            <o-header class="demo">header</o-header>
+            <o-layout>
+                <o-sider class="demo">sider</o-sider>
+                <o-content class="demo">content</o-content>
+            </o-layout>            
+            <o-footer class="demo">footer</o-footer>
+          </o-layout>
+    </div>
+
     <div class="box">
       <o-row gutter="20">
         <o-col span="2">1</o-col>
