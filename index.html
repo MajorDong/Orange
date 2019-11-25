@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <title>Orange</title>
   <style>
     * {
@@ -28,10 +28,12 @@
     #app {
       margin: 20px
     }
-    .box{
+
+    .box {
       margin: 20px;
     }
-    .demo{
+
+    .demo {
       border: 1px solid red;
       min-height: 100px;
     }
@@ -40,6 +42,7 @@
 
 <body>
   <div id="app">
+
     <div class="box">
       <o-layout style="height: 100vh;">
         <o-header class="demo">header</o-header>
@@ -49,29 +52,29 @@
     </div>
 
     <div class="box">
-        <o-layout style="height: 100vh;">
-            <o-sider class="demo">sider</o-sider>
-            <o-layout>
-                <o-header class="demo">header</o-header>
-                <o-content class="demo">content</o-content>
-                <o-footer class="demo">footer</o-footer>
-            </o-layout>                       
-          </o-layout>
+      <o-layout style="height: 100vh;">
+        <o-sider class="demo">sider</o-sider>
+        <o-layout>
+          <o-header class="demo">header</o-header>
+          <o-content class="demo">content</o-content>
+          <o-footer class="demo">footer</o-footer>
+        </o-layout>
+      </o-layout>
     </div>
 
     <div class="box">
       <o-row gutter="20">
         <o-col span="2">1</o-col>
         <o-col span="22">2</o-col>
-      </g-row>
+        </g-row>
     </div>
 
 
     <div class="box">
-        <o-input value="NORMAL"></o-input>
-        <o-input value="READONLY" readonly></o-input>
-        <o-input value="DISABLED" disabled></o-input>
-        <o-input value="ERROR" error="Error message" @change="inputchange"></o-input>
+      <o-input value="NORMAL"></o-input>
+      <o-input value="READONLY" readonly></o-input>
+      <o-input value="DISABLED" disabled></o-input>
+      <o-input value="ERROR" error="Error message"></o-input>
     </div>
     <div class="box">
       <o-input v-model="message"></o-input>
@@ -94,7 +97,10 @@
       </o-button-group>
 
     </div>
-    
+    <div class="box">
+      <button @click="showToast">点击</button>
+
+    </div>
 
   </div>
   <script src="./src/app.js"></script>
