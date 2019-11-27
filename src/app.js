@@ -35,6 +35,18 @@ new Vue({
     loading3: false,
     message: 'hello world'
   },
+  created(){
+    this.$toast('<em>hi<em>',{
+      position: 'bottom',
+      closeButton:{
+        text: '知道了',
+        callback(toast){
+          toast.log()
+          console.log('用户知道了')
+        }
+      }
+    })
+  },
   methods:{
     inputchange: function(e){
       console.log(e.target.value)
@@ -42,7 +54,7 @@ new Vue({
   },
   methods:{
     showToast(){
-      this.$toast('我是message')
+      this.$toast('我是message',{})
     }
   }
 })
