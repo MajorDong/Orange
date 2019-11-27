@@ -1,5 +1,6 @@
 <template>
   <div class="toast" :class="toastClasses">
+   
     <!-- <slot></slot> -->
     <!-- <slot v-if="!enableHtml"></slot> -->
     <slot></slot>

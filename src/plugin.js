@@ -27,7 +27,7 @@ function createToast({Vue,message,propsData,onclose}){
   })
   toast.$slots.default = [message]
   toast.$mount() //让生命周期的钩子执行
-  toast.on('close',onclose)
+  toast.$on('close',onclose)
   document.body.appendChild(toast.$el)
   return toast
 }
