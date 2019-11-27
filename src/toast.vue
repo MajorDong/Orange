@@ -62,6 +62,7 @@ export default {
   methods: {
     close() {
       this.$el.remove() //移除组件
+      this.$emit('close')
       this.$destroy() //destory并不会把组件从页面中移除
     },
     onClickClose() {
