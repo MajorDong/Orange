@@ -12,6 +12,11 @@ import Content from './content'
 import Footer from './footer'
 import Toast from './toast'
 import plugin from './plugin';
+import Tabs from './tabs.vue'
+import TabsHead from './tabs-head.vue'
+import TabsItem from './tabs-item.vue'
+import TabsBody from './tabs-body.vue'
+import TabsPane from './tabs-pane.vue'
 
 Vue.component('o-button', Button)
 Vue.component('o-icon', Icon)
@@ -26,6 +31,11 @@ Vue.component('o-content',Content)
 Vue.component('o-footer',Footer)
 Vue.component('o-toast', Toast)
 Vue.use(plugin)
+Vue.component('o-tabs',Tabs)
+Vue.component('o-tabs-head',TabsHead)
+Vue.component('o-tabs-item',TabsItem)
+Vue.component('o-tabs-body',TabsBody)
+Vue.component('o-tabs-pane',TabsPane)
 
 new Vue({
   el: '#app',
@@ -33,7 +43,8 @@ new Vue({
     loading1: false,
     loading2: true,
     loading3: false,
-    message: 'hello world'
+    message: 'hello world',
+    selectedTab: 'sports',
   },
   created(){
     

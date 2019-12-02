@@ -102,7 +102,33 @@
       <button @click="showToast2">Middle</button>
       <button @click="showToast3">Bottom</button>
     </div>
-
+    <div class="box">
+      <o-tab selected.sync="selectedTab"> 修饰符等价于
+      <o-tabs selected="selectedTab" @updata:selected="selectedTab = $event">
+        <o-tabs-head>
+          <o-tabs-item name="woman"> 
+            美女
+          </o-tabs-item >
+          <o-tabs-item name="finance">
+            财经
+          </o-tabs-item>
+          <o-tabs-item name="sports">
+            体育
+          </o-tabs-item>
+        </o-tabs-head>
+        <o-tabs-body>
+          <o-tabs-pane name="woman">
+            美女相关资讯
+          </o-tabs-pane>
+          <o-tabs-pane name="finance">
+            财经相关资讯
+          </o-tabs-pane>
+          <o-tabs-pane name="sports">
+            体育相关资讯
+          </o-tabs-pane>
+        </o-tabs-body>
+      </o-tabs>
+    </div>
   </div>
   <script src="./src/app.js"></script>
   <script src="//at.alicdn.com/t/font_1518337_qp5ptvzkwg.js"></script>
