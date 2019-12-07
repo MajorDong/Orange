@@ -50,6 +50,7 @@ new Vue({
     
   },
   methods:{
+    yyy(){},
     inputchange: function(e){
       console.log(e.target.value)
     }
