@@ -47,7 +47,7 @@ export default {
          position: absolute;
          left: 0;
          bottom: 0px;
-         border-bottom: 2px solid blue;
+         border-bottom: 2px solid #448ef7;
          transition: all 350ms;
       }
    

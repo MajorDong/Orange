@@ -59,9 +59,12 @@ export default {
       cursor: pointer;
       display: flex;
       align-items: center;
+      &:hover{
+         color: #448ef7;
+      }
       &.active{
          font-weight: bold;
-         color: aqua;
+         color: #448ef7;
       }
       &.disabled{
          color: gray;
