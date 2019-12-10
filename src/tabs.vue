@@ -36,7 +36,16 @@ export default {
    // //    this.eventBus.$emit('updata:selected','这是eventbus')
    // },
    mounted(){
-      this.$emit('update:selected',this.selected)
+      //this.$children数组
+      this.$children.forEach((vm)=>{
+         if(vm.$options.name ==='o-tabs-head'){
+            vm.$children.forEach((item)=>{
+               if(item.$options.name === 'o-tabs-item' && item.name === this.selected){
+                  this.eventBus.$emit('update:selected',this.selected, item)
+               }
+            })
+         }
+      })
    }
 }
 </script>

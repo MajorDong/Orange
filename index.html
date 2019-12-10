@@ -103,9 +103,9 @@
       <button @click="showToast3">Bottom</button>
     </div>
     <div class="box">
-      <!-- <o-tabs :selected.sync="selectedTab" > -->
+      <o-tabs :selected.sync="selectedTab" >
         <!-- 修饰符等价于 -->
-        <o-tabs selected="sports" @updata:selected="selectedTab = $event"> 
+        <!-- <o-tabs selected="sports" @updata:selected="selectedTab = $event">  -->
         <o-tabs-head>
           
           <o-tabs-item name="woman">
@@ -117,7 +117,7 @@
           <o-tabs-item name="sports">
             体育
           </o-tabs-item>
-          <template slots="actions">
+          <template slot="actions">
             <button>设置</button>
           </template>
         </o-tabs-head>
