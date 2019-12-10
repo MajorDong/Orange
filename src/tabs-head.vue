@@ -37,6 +37,7 @@ export default {
       align-items: center;
       height: 40px;  
       position: relative;
+      border-bottom: 1px solid #ddd;
       >.actions-wrapper{
       margin-left: auto;
       }

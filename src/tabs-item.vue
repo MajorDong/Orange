@@ -26,6 +26,7 @@ export default {
       classes(){
          return {
             active: this.active,
+            disabled: this.disabled,
          }
       }
    },
@@ -41,7 +42,10 @@ export default {
    },
    methods:{
       pickItem(){
-         this.eventBus.$emit('update:selected',this.name, this)
+         if(this.disabled){
+            return
+         }
+         this.eventBus.$emit('update:selected',this.name, this)    
       }
    }
 }
@@ -58,7 +62,10 @@ export default {
       &.active{
          font-weight: bold;
          color: aqua;
-
+      }
+      &.disabled{
+         color: gray;
+         cursor: not-allowed;
       }
    }
 </style>
