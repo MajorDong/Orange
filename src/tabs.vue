@@ -37,7 +37,7 @@ export default {
    // },
    mounted(){
       //this.$children数组
-      this.$children.forEach((vm)=>{
+      this.$children.forEach((vm) => {
          if(vm.$options.name ==='o-tabs-head'){
             vm.$children.forEach((item)=>{
                if(item.$options.name === 'o-tabs-item' && item.name === this.selected){

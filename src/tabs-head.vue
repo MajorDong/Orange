@@ -19,10 +19,12 @@
 export default {
    name:'o-tabs-head',
    inject: ['eventBus'],
-   created(){
-      this.eventBus.$on('update:selected',(itemName, vm) => {
-         console.log(itemName)
-         console.log(vm)
+   mounted(){
+      this.eventBus.$on('update:selected',(itemName, item) => {
+         let{width, height, top, left} = item.$el.getBoundingClientRect()
+         console.log(top,left)
+         this.$refs.line.style.width = `${width}px`
+         this.$refs.line.style.left = `${left}px`
       })
    }
 }
@@ -30,7 +32,6 @@ export default {
 
 <style lang="scss" scoped>
    .tabs-head{
-      border: 1px solid red;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -46,8 +47,7 @@ export default {
          left: 0;
          bottom: 0px;
          border-bottom: 2px solid blue;
-         width: 100px;
-         height: 2px;
+         transition: all 350ms;
       }
    
    
