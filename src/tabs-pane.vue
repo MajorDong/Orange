@@ -39,10 +39,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+   @keyframes pane {
+      0% {transform: translateX(100%)};
+      100% {transform: translateX(0%)};
+   }
    .tabs-pane{
       &.active{
          color: #448ef7;
          padding: 2em;
+         animation: pane 0.5s;
       }
    }
 </style>
