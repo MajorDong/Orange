@@ -24,7 +24,7 @@ export default {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      height: 40px;
+      height: 40px;    
    }
    // action放在右边
    .actions-wrapper{
