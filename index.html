@@ -103,11 +103,11 @@
       <button @click="showToast3">Bottom</button>
     </div>
     <div class="box">
-      <o-tabs :selected.sync="selectedTab" >
+      <o-tabs :selected.sync="selectedTab">
         <!-- 修饰符等价于 -->
         <!-- <o-tabs selected="sports" @updata:selected="selectedTab = $event">  -->
         <o-tabs-head>
-          
+
           <o-tabs-item name="1" disabled>
             Tab 1
           </o-tabs-item>
@@ -133,6 +133,18 @@
           </o-tabs-pane>
         </o-tabs-body>
       </o-tabs>
+    </div>
+    <div class="box">
+      <o-popover>
+        <template slot="content">
+          <div>popover内容</div>
+        </template>
+        <button>点击</button>
+        <template slot="content">
+          <div></div>
+        </template>
+        <button>点击</button>
+      </o-popover>
     </div>
   </div>
   <script src="./src/app.js"></script>
