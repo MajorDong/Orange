@@ -1,45 +1,57 @@
 <template>
   <div class="popover" @click.stop="popContent">
-    <div class="contentWrapper" v-if="visible" @click.stop>
+    <div ref="contentWrapper" class="contentWrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
-    <slot></slot>
+    <span ref="triggerWrapper">
+      <slot></slot>
+    </span>
   </div>
 </template>
 
 <script>
 export default {
-  name:'o-popover',
-  data(){
-    return{
-      visible: false,
-    }
+  name: "o-popover",
+  data() {
+    return {
+      visible: false
+    };
   },
-  methods:{
-    popContent(){
-      this.visible = !this.visible
-      if(this.visible === true){
-        document.addEventListener('click', function x(){
-          this.visible = false
-        }.bind(this))
+  methods: {
+    popContent() {
+      this.visible = !this.visible;
+      if (this.visible === true) {
+        this.$nextTick(() => {
+          document.body.appendChild(this.$refs.contentWrapper);
+          let {
+            width,
+            height,
+            top,
+            left
+          } = this.$refs.triggerWrapper.getBoundingClientRect();
+          this.$refs.contentWrapper.style.left = left +window.scrollX + 'px'
+          this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
+          let eventHandler = () => {
+            this.visible = false;
+            document.removeEventListener("click", eventHandler);
+          };
+          document.addEventListener("click", eventHandler);
+        });
       }
     }
   }
-
-}
+};
 </script>
 
 <style lang="scss" scoped>
-  .popover {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    .contentWrapper{
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      border: 1px solid red;
-      box-shadow: 0 0 3px rgba(0,0,0,0.5);
-    }
-  }
+.popover {
+  display: inline-block;
+  vertical-align: top;
+}
+.contentWrapper {
+  position: absolute;
+  transform: translateY(-100%);
+  border: 1px solid red;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
 </style>
