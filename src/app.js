@@ -52,12 +52,10 @@ new Vue({
     
   },
   methods:{
-    yyy(){},
+    yyy(){console.log('yyy')},
     inputchange: function(e){
       console.log(e.target.value)
-    }
-  },
-  methods:{
+    },
     showToast1(){
       this.showToast('top')
     },

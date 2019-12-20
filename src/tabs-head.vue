@@ -22,7 +22,6 @@ export default {
    mounted(){
       this.eventBus.$on('update:selected',(itemName, item) => {
          let{width, height, top, left} = item.$el.getBoundingClientRect()
-         console.log(top,left)
          this.$refs.line.style.width = `${width}px`
          this.$refs.line.style.left = `${left}px`
       })

@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click.stop="popContent">
+  <div class="popover" @click="popContent($event)" ref="popover">
     <div ref="contentWrapper" class="contentWrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
@@ -18,25 +18,44 @@ export default {
     };
   },
   methods: {
-    popContent() {
-      this.visible = !this.visible;
-      if (this.visible === true) {
-        this.$nextTick(() => {
-          document.body.appendChild(this.$refs.contentWrapper);
-          let {
-            width,
-            height,
-            top,
-            left
-          } = this.$refs.triggerWrapper.getBoundingClientRect();
-          this.$refs.contentWrapper.style.left = left +window.scrollX + 'px'
-          this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
-          let eventHandler = () => {
-            this.visible = false;
-            document.removeEventListener("click", eventHandler);
-          };
-          document.addEventListener("click", eventHandler);
-        });
+    positionContent() {
+      document.body.appendChild(this.$refs.contentWrapper);
+      let {
+        width,
+        height,
+        top,
+        left
+      } = this.$refs.triggerWrapper.getBoundingClientRect();
+      this.$refs.contentWrapper.style.left = left + window.scrollX + "px";
+      this.$refs.contentWrapper.style.top = top + window.scrollY + "px";
+    },
+    listenToDocument() {
+      let eventHandler = () => {
+        if (
+          this.$refs.contentWrapper &&
+          this.$refs.contentWrapper.contains(event.target)
+        ) {
+          return;
+        }
+        this.visible = false;
+        document.removeEventListener("click", eventHandler);
+      };
+      document.addEventListener("click", eventHandler);
+    },
+    handleContent() {
+      setTimeout(() => {
+        this.positionContent();
+        this.listenToDocument();
+      });
+    },
+    popContent(event) {
+      if (this.$refs.triggerWrapper.contains(event.target)) {
+        this.visible = !this.visible;
+        if (this.visible === true) {
+          //因为v-if，不能立马在visible变为true时操作DOM
+          this.handleContent();
+        }
+      } else {
       }
     }
   }

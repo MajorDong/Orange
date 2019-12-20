@@ -134,12 +134,30 @@
         </o-tabs-body>
       </o-tabs>
     </div>
-    <div class="box">
+    <div class="box" @click="yyy">
       <o-popover>
         <template slot="content">
           <div>popover内容</div>
         </template>
-        <button>点击</button>
+        <button>点击上</button>
+      </o-popover>
+      <o-popover>
+        <template slot="content">
+          <div>popover内容</div>
+        </template>
+        <button>点击下</button>
+      </o-popover>
+      <o-popover>
+        <template slot="content">
+          <div>popover内容</div>
+        </template>
+        <button>点击左</button>
+      </o-popover>
+      <o-popover>
+        <template slot="content">
+          <div>popover内容</div>
+        </template>
+        <button>点击右</button>
       </o-popover>
     </div>
   </div>
