@@ -154,8 +154,11 @@
         <o-button>点击左</o-button>
       </o-popover>
       <o-popover position="right">
-        <template slot="content">
-          <div>popover内容</div>
+        <template slot="content" slot-scope="{close}">
+          <!-- 可以给scope的对象取名或直接解构 -->
+          <div>popover内容
+            <o-button @click="close">Close</o-button>
+          </div>
         </template>
         <o-button>点击右</o-button>
       </o-popover>
@@ -181,7 +184,9 @@
       </o-popover>
       <o-popover position="right" trigger="hover">
         <template slot="content">
-          <div>popover内容</div>
+          <div>popover内容
+            
+          </div>
         </template>
         <o-button>点击右</o-button>
       </o-popover>

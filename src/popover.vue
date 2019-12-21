@@ -6,7 +6,7 @@
       v-if="visible"
       v-bind:class="{[`position-${position}`]:true,}"
     >
-      <slot name="content"></slot>
+      <slot name="content" :close="hoverClose"></slot>
     </div>
     <span ref="triggerWrapper" style="display:inline-block;">
       <slot></slot>
@@ -189,11 +189,13 @@ export default {
       top: 100%;
       left: 10px;
       border-top-color: #333;
+      border-bottom: none;
     }
     &::after {
       border-top-color: white;
       top: calc(100% - 2px);
       left: 10px;
+      border-bottom: none;
     }
   }
   &.position-bottom {
@@ -202,9 +204,11 @@ export default {
       left: 10px;
       bottom: 100%;
       border-bottom-color: #333;
+      border-top: none;
     }
     &::after {
       border-bottom-color: white;
+      border-top: none;
       bottom: calc(100% - 2px);
       left: 10px;
     }
@@ -217,12 +221,14 @@ export default {
       top: 50%;
       transform: translateY(-50%);
       border-left-color: #333;
+      border-right: none;
     }
     &::after {
       left: calc(100% - 2px);
       top: 50%;
       transform: translateY(-50%);
       border-left-color: white;
+      border-right: none;
     }
   }
   &.position-right {
@@ -232,12 +238,14 @@ export default {
       top: 50%;
       transform: translateY(-50%);
       border-right-color: #333;
+      border-left: none;
     }
     &::after {
       right: calc(100% - 2px);
       top: 50%;
       transform: translateY(-50%);
       border-right-color: white;
+      border-left: none;
     }
   }
 }
