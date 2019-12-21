@@ -17,11 +17,6 @@
 <script>
 export default {
   name: "o-popover",
-  data() {
-    return {
-      visible: false
-    };
-  },
   props: {
     position: {
       type: String,
@@ -29,7 +24,47 @@ export default {
       validator(value) {
         return ["top", "bottom", "left", "right"].indexOf(value) >= 0;
       }
+    },
+    trigger: {
+      type: String,
+      default: 'click',
+      validator(value){
+        return ['click','hover'].indexOf(value) >= 0
+      }
     }
+  },
+  data() {
+    return {
+      visible: false
+    };
+  },
+  computed:{
+    openEvent(){
+      if(this.trigger ==='hover'){
+        return 'mouseenter'
+      }
+    },
+    closeEvent(){
+      if(this.trigger === 'hover'){
+        return 'mouseleave'
+      }
+    },
+  },
+  mounted(){
+    this.$refs.popover.addEventListener(this.openEvent, ()=>{
+      this.hoverOpen()
+    })
+    this.$refs.popover.addEventListener(this.closeEvent, ()=>{
+      this.hoverClose()
+    })
+  },
+  destroyed(){
+    this.$refs.popover.removeEventListener(this.openEvent, ()=>{
+      this.hoverOpen()
+    })
+    this.$refs.popover.removeEventListener(this.closeEvent, ()=>{
+      this.hoverClose()
+    })
   },
   methods: {
     positionContent() {
@@ -65,6 +100,16 @@ export default {
         this.$refs.contentWrapper.style.top =
           top + window.scrollY + align + "px";
       }
+    },
+    hoverOpen(){
+      this.$refs.popover.removeEventListener('click', this.popContent)
+      this.visible = true
+      setTimeout(()=>{
+        this.positionContent()
+      }) 
+    },
+    hoverClose(){
+      this.visible = false
     },
     listenToDocument() {
       let eventHandler = () => {
