@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="popContent($event)" ref="popover">
+  <div class="popover" @click="popContent" ref="popover">
     <div
       ref="contentWrapper"
       class="contentWrapper"

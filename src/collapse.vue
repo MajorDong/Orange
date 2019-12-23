@@ -1,13 +1,18 @@
 <template>
-  
+  <div class="collapse">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
 export default {
-  name:'o-colla'
+  name:'o-collapse'
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .collapse{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
 </style>

@@ -18,6 +18,8 @@ import TabsItem from './tabs-item.vue'
 import TabsBody from './tabs-body.vue'
 import TabsPane from './tabs-pane.vue'
 import Popover from './popover.vue'
+import Collapse from './collapse.vue'
+import CollapseItem from './collapse-item.vue'
 
 Vue.component('o-button', Button)
 Vue.component('o-icon', Icon)
@@ -38,6 +40,8 @@ Vue.component('o-tabs-item',TabsItem)
 Vue.component('o-tabs-body',TabsBody)
 Vue.component('o-tabs-pane',TabsPane)
 Vue.component('o-popover', Popover)
+Vue.component('o-collapse', Collapse)
+Vue.component('o-collapse-item', CollapseItem)
 
 new Vue({
   el: '#app',
