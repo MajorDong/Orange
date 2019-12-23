@@ -105,7 +105,7 @@
     <div class="box">
       <o-tabs :selected.sync="selectedTab">
         <!-- 修饰符等价于 -->
-        <!-- <o-tabs selected="sports" @updata:selected="selectedTab = $event">  -->
+        <!-- <o-tabs :selected="selectedTab" @updata:selected="selectedTab = $event">  -->
         <o-tabs-head>
 
           <o-tabs-item name="1" disabled>
@@ -154,9 +154,10 @@
         <o-button>点击左</o-button>
       </o-popover>
       <o-popover position="right">
-        <template slot="content" slot-scope="{close}">
+        <template  v-slot:content="{close,sdx}">
           <!-- 可以给scope的对象取名或直接解构 -->
-          <div>popover内容
+          <div>
+            {{sdx}} popover
             <o-button @click="close">Close</o-button>
           </div>
         </template>

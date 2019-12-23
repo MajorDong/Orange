@@ -6,7 +6,7 @@
       v-if="visible"
       v-bind:class="{[`position-${position}`]:true,}"
     >
-      <slot name="content" :close="hoverClose"></slot>
+      <slot name="content" :close="hoverClose" :sdx="'Content of'"></slot>
     </div>
     <span ref="triggerWrapper" style="display:inline-block;">
       <slot></slot>
