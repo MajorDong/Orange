@@ -10,8 +10,10 @@ export default {
   name:'o-collapse',
   data(){
     return{
-      eventBus: new Vue()
+      eventBus: new Vue(),
+      dataSelected: this.selected
     }
+    
   },
   props:{
     single: {
@@ -29,6 +31,10 @@ export default {
   },
   mounted(){
     this.eventBus.$emit('update:selected', this.selected)
+    this.eventBus.$on('update:selected', (name)=>{
+      this.dataSelected = name
+      this.$emit('update:selected', this.dataSelected)
+    })
   }
 }
 </script>

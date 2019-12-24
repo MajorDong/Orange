@@ -192,11 +192,12 @@
       </o-popover>
     </div>
     <div class="box" style="margin: 20px;">
-      <o-collapse selected="2">
+      <o-collapse :selected.sync="selectedTab">
         <o-collapse-item title="标题1" name="1">content1</o-collapse-item>
         <o-collapse-item title="标题2" name="2">content2</o-collapse-item>
         <o-collapse-item title="标题3" name="3">content3</o-collapse-item>
       </o-collapse>
+      {{selectedTab}}
     </div>
   </div>
   <script src="./src/app.js"></script>
