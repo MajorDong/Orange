@@ -30,12 +30,12 @@ export default {
     }
     
     &:first-child{
-      border-top-left-radius: var(--border-radius);
-      border-bottom-left-radius: var(--border-radius)
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
     }
     &:last-child{
-      border-top-right-radius: var(--border-radius);
-      border-bottom-right-radius: var(--border-radius)
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
     }
     &:hover{
       position: relative;

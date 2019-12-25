@@ -14,16 +14,6 @@
       box-sizing: border-box;
     }
 
-    :root {
-      --button-height: 32px;
-      --button-size: 14px;
-      --button-bg: white;
-      --button-active-bg: #eee;
-      --border-radius: 4px;
-      --color: #333;
-      --border-color: #999;
-      --border-color-hover: #666;
-    }
 
     #app {
       margin: 20px 0px
@@ -93,7 +83,7 @@
       <o-button-group>
         <o-button icon="left">上一页</o-button>
         <o-button>更多</o-button>
-        <o-button icon="right">下一页</o-button>
+        <o-button icon="right" icon-position="right">下一页</o-button>
       </o-button-group>
 
     </div>
@@ -193,7 +183,8 @@
     </div>
     <div class="box" style="margin: 20px;">
       <o-collapse :selected.sync="selectedItem" single>
-        <o-collapse-item title="标题1" name="1">content1</o-collapse-item>
+        <o-collapse-item title="标题1" name="1">content1
+        </o-collapse-item>
         <o-collapse-item title="标题2" name="2">content2</o-collapse-item>
         <o-collapse-item title="标题3" name="3">content3</o-collapse-item>
       </o-collapse>
@@ -201,7 +192,6 @@
     </div>
   </div>
   <script src="./src/app.js"></script>
-  <script src="//at.alicdn.com/t/font_1518337_qp5ptvzkwg.js"></script>
 </body>
 
 </html>

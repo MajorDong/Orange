@@ -1,16 +1,24 @@
 <template>
   <div class="collapseItem">
     <div class="title" @click="toggle">
-      {{title}}
+      <span>{{title}}</span>
+    <o-icon class="icon" :class="{activeClass:iconActive,closeClass:iconClose}" name="right"></o-icon>
     </div>
-    <div class="content" v-if="open" >
+    <transition name="slide">
+      <div class="content" v-if="open" >
       <slot><slot>
     </div>  
+    </transition>
+    
   </div>
 </template>
 
 <script>
+import Icon from './icon'
 export default {
+  components:{
+    'o-icon': Icon
+  },
   name:'o-collapse-item',
   props:{
     title: {
@@ -26,6 +34,8 @@ export default {
     return{
       open:false,
       single: false,
+      iconActive: false,
+      iconClose: true,
     }
   },
   inject: ['eventBus'],
@@ -33,13 +43,16 @@ export default {
     this.eventBus.$on('update:selected', (names)=>{
       if(names.indexOf(this.name) >= 0 ){        
         this.open = true
+        this.iconActive = true
       }else{
-          this.open = false      
+          this.open = false
+          this.iconActive = false
       }
     })
   },
   methods:{
     toggle(){
+      this.iconActive =!this.iconActive
       if(this.open){
         this.eventBus.$emit('update:removeSelected',this.name)
       } else {
@@ -53,15 +66,27 @@ export default {
 
 <style lang="scss" scoped>
   .collapseItem{
+    
     >.title{
       border: 1px solid #ddd;
       margin-top: -1px;
       margin-left: -1px;
       margin-right: -1px;
-      min-height: 32px;
+      min-height: 37px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       padding: 0 8px;
+      font-weight: 600;
+      >.closeClass{
+        transform: rotate(0deg);
+        transition: all 0.2s;
+      }
+      >.activeClass{
+        transform: rotate(90deg);
+        transition: all 0.2s;
+      }
+      
     }
     &:first-child{
       >.title{
@@ -71,7 +96,16 @@ export default {
     }
   
     >.content{
-      padding: 8px
+      padding: 8px;
     }
+  }
+  .slide-enter-active ,.slide-leave-active{
+    transition: all 0.2s;
+  }
+  
+  .slide-enter, .slide-leave-to{
+    transform: translateY(-20%);
+    opacity: 0;
+    
   }
 </style>

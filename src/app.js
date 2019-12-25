@@ -51,7 +51,7 @@ new Vue({
     loading3: false,
     message: 'hello world',
     selectedTab: '3',
-    selectedItem: ['1','2'],
+    selectedItem: [],
   },
   created(){
     

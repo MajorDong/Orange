@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import './svg' //import后执行代码
 export default {
   props:['name']
 }

@@ -4,14 +4,14 @@
     <o-icon v-if="loading" class="loading icon" name="loading"></o-icon>
     <!-- 插槽上不能添加clss -->
     <div class="content">
-         <slot><slot> 
+         <slot></slot> 
     </div>
     </button>
 </template>
 
 <script>
-
 import Icon from './icon'
+
 export default {
   components:{
     'o-icon': Icon
@@ -52,17 +52,17 @@ export default {
   justify-content: center;
   align-items: center;
   vertical-align:middle; //外部对齐
-  font-size: var(--font-size);
-  height: var(--button-height);
+  font-size: 14px;
+  height: 32px;
   padding: 0 0.6em;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  border-radius: 4px;
+  border: 1px solid  #999;
+  background: white;
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: #666;
   }
   &:active {
-    background-color: var(--border-active-bg);
+    background-color:  #eee;
   }
   &:focus {
     outline: none;
