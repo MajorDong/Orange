@@ -1,6 +1,6 @@
 <template>
   <div class="o-button-group">
-    <slot><slot>
+    <slot></slot>
   </div>
 </template>
 
