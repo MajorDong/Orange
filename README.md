@@ -29,7 +29,7 @@ Orange UI 是一个小型的 UI 框架，提供了一些常用组件，适合桌
 
 1. 添加 CSS 样式
     使用本框架前，请在 CSS 中开启 border-box
-    ```
+    ```css
     *，*::before,*::after{ box-sizing: border-box }
     ```
     IE 8 及以上浏览器支持此样式。
