@@ -30,7 +30,8 @@ module.exports = {
             './components/layout',
             './components/grid',
             './components/collapse',
-            './components/tabs'
+            './components/tabs',
+            './components/popover'
           ]
       }
     ]

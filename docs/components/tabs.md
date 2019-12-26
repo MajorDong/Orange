@@ -86,3 +86,10 @@ data(){
   </o-tabs-body>
 </o-tabs>
 ```
+```js
+data(){
+  return{
+    selectedTab: '1',
+  }
+}
+```

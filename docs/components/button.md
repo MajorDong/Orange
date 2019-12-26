@@ -21,7 +21,7 @@
 
 ## 按钮组合
 
-可以将多个人 `button` 放入 `button-group`容器中, 通过 `icon-position` 属性调整 `icon` 位置。
+可以将多个 `button` 放入 `button-group`容器中, 通过 `icon-position` 属性调整 `icon` 位置。
 
 **浏览**
 
