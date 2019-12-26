@@ -6,7 +6,7 @@
     </div>
     <transition name="slide">
       <div class="content" v-if="open" >
-      <slot><slot>
+      <slot></slot>
     </div>  
     </transition>
     
@@ -77,7 +77,8 @@ export default {
       align-items: center;
       justify-content: space-between;
       padding: 0 8px;
-      font-weight: 600;
+
+      background: #fafafa;
       >.closeClass{
         transform: rotate(0deg);
         transition: all 0.2s;
@@ -97,6 +98,8 @@ export default {
   
     >.content{
       padding: 8px;
+      color: #616161;
+      background: #ffffff;
     }
   }
   .slide-enter-active ,.slide-leave-active{
