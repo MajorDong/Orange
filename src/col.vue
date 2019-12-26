@@ -12,7 +12,7 @@ export default {
       type: [Number, String],
     },
     offset: {
-      type: [Number,String]
+      type: [Number, String],
     },
     // gutter:{
     //   type: [Number,String]
@@ -29,7 +29,7 @@ export default {
     colClass(){
       let span = this.span
       let offset = this.offset
-      return [span&&`col-${span}`,offset&&`offset-${offset}`]
+      return [span &&`col-${span}`,offset && `offset-${offset}`]
     },
     colStyle(){
       return {
@@ -43,9 +43,10 @@ export default {
 
 <style lang="scss" scoped>
 .col {
-  height: 100px;
-  background: gray;
+  height: 64px;
+  background: #7ebbeb;
   width: 50%;
+  border: 1px solid #cccccc;
   
 
   $class-prefix: col-;
@@ -54,6 +55,7 @@ export default {
       width: ($n / 24) * 100%;
     }
   }
+
   $class-prefix: offset-;
   @for $n from 1 through 24 {
     &.#{$class-prefix}#{$n} {

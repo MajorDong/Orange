@@ -4,6 +4,8 @@
     <o-button icon="settings">默认按钮</o-button>
     <o-button :loading="true">默认按钮</o-button>
     <o-button disabled>默认按钮</o-button>
+    <o-button icon="awesome">点赞</o-button>
+    <o-button icon="download">下载</o-button>
   </div>
 </template>
 

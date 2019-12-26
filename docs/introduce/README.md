@@ -1,5 +1,7 @@
 # Orange UI
-[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
+[![Build Status](https://travis-ci.org/MajorDong/Orange.svg?branch=master)](https://travis-ci.org/MajorDong/Orange)
+![](https://img.shields.io/badge/language-JavaScript-yellow.svg)
+![](https://img.shields.io/badge/license-MIT-000000.svg)
 
 Orange UI 是一个小型的 UI 框架，提供了一些常用组件，适合桌面端使用。
 

@@ -11,7 +11,7 @@ module.exports = {
       { title:'介绍',
         collapsable: false,
         children:[
-          '/introduce',
+          '/introduce/',
         ],
       },
       {
@@ -24,7 +24,12 @@ module.exports = {
       {
         title: '组件',
         collapsable: false,
-        children: ['./components/button']
+        children: [
+            './components/button',
+            './components/input',
+            './components/layout',
+            './components/grid'
+          ]
       }
     ]
   }
