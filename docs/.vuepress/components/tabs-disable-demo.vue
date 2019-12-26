@@ -8,12 +8,9 @@
           <o-tabs-item name="2">
             Tab 2
           </o-tabs-item>
-          <o-tabs-item name="3">
+          <o-tabs-item name="3" disabled>
             Tab 3
           </o-tabs-item>
-          <template v-slot:actions>
-            <button>按钮</button>
-          </template>
         </o-tabs-head>
         <o-tabs-body>
           <o-tabs-pane name="1">
@@ -46,7 +43,7 @@ export default {
   },
   data(){
     return{
-      selectedTab: '1',
+      selectedTab: '2',
     }
   }
 }
