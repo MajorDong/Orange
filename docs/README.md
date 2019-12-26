@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /orange.png
-actionText: 快速上手 →
+actionText: Getting Started →
 actionLink: /introduce/
 features:
 - title: 简洁优先
