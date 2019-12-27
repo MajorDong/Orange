@@ -19,11 +19,11 @@ export default {
   props: {
     autoClose: {
       type: Boolean,
-      default: true
+      default: false,
     },
     autoCloseDelay: {
       type: Number,
-      default: 50 //浅拷贝
+      default: 5//浅拷贝
     },
     closeButton: {
       //关闭按钮
@@ -115,6 +115,7 @@ export default {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 30;
   &.position-top {
     top: 0;
     .toast {
@@ -138,7 +139,7 @@ export default {
 }
 .toast {
   font-size: 14px;
-  height: 40px; //高度不定的div里面的div能不能一样高
+  height: 32px; //高度不定的div里面的div能不能一样高
   line-height: 1.8;
   display: flex;
   color: white;
@@ -149,6 +150,9 @@ export default {
   padding: 7px 16px;
 
   .close {
+    &:hover{
+      color: #95b9e2;
+    }
     padding-left: 16px;
     cursor: pointer;
     flex-shrink: 0;

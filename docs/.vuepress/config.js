@@ -1,6 +1,9 @@
 module.exports = {
   title: 'Orange UI',
   description: '一个基于Vue2.0的UI框架',
+  head: [
+    ['link', { rel: 'icon', href: './public/favicon.ico' }]
+  ],
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
@@ -31,7 +34,8 @@ module.exports = {
             './components/grid',
             './components/collapse',
             './components/tabs',
-            './components/popover'
+            './components/popover',
+            './components/toast'
           ]
       }
     ]

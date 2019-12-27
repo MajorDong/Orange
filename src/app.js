@@ -61,13 +61,13 @@ new Vue({
     inputchange: function(e){
       console.log(e.target.value)
     },
-    showToast1(){
+    showToastTop(){
       this.showToast('top')
     },
-    showToast2(){
+    showToastMiddle(){
       this.showToast('middle')
     },
-    showToast3(){
+    showToastBottom(){
       this.showToast('bottom')
     },
     showToast(position){
