@@ -6,7 +6,9 @@
 
 **浏览**
 
+<ClientOnly>
 <popover-demo></popover-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -49,7 +51,9 @@
 
 **浏览**
 
+<ClientOnly>
 <popover-hover-demo></popover-hover-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -92,7 +96,9 @@
 
 **浏览**
 
+<ClientOnly>
 <popover-close-demo></popover-close-demo>
+</ClientOnly>
 
 **代码演示**
 

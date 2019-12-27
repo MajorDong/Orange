@@ -15,8 +15,8 @@ Orange UI 是一个小型的 UI 框架，提供了一些常用组件，适合桌
 ## 部分组件的实现思路
 [官方文档]()
 ## 提问
-[Issues]()
+[Issues](https://github.com/MajorDong/Orange/issues)
 ## 联系方式
 邮箱：odsts@outlook.com
 ## 贡献代码
-[Pull request]()
+[Pull request](https://github.com/MajorDong/Orange/pulls)

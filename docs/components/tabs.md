@@ -8,7 +8,9 @@
 
 **浏览**
 
+<ClientOnly>
 <tabs-demo></tabs-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -56,7 +58,9 @@ data(){
 
 设置默认选中第二项，禁用第三项
 
+<ClientOnly>
 <tabs-disable-demo></tabs-disable-demo>
+</ClientOnly>
 
 **代码演示**
 

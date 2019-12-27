@@ -4,7 +4,9 @@
 
 **浏览**
 
+<ClientOnly>
 <button-demo></button-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -25,7 +27,9 @@
 
 **浏览**
 
+<ClientOnly>
 <button-group-demo></button-group-demo>
+</ClientOnly>
 
 **代码演示**
 

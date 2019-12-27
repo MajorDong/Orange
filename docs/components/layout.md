@@ -8,7 +8,9 @@
 
 **浏览**
 
+<ClientOnly>
 <layout-demo></layout-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -33,7 +35,9 @@
 
 **浏览**
 
+<ClientOnly>
 <layout-demo-1></layout-demo-1>
+</ClientOnly>
 
 **代码演示**
 
@@ -62,7 +66,9 @@
 
 **浏览**
 
+<ClientOnly>
 <layout-in></layout-in>
+</ClientOnly>
 
 **代码演示**
 

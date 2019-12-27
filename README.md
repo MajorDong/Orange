@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="">
+  <a href="https://majordong.github.io/Orange/">
     <img width="200" src="./img/orange.png">
   </a>
 </p>
 
 <h1 align="center">
-  <a href>Orange UI</a>
+  <a href="https://majordong.github.io/Orange/">Orange UI</a>
 </h1>
 
 <div align="center">

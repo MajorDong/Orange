@@ -4,7 +4,9 @@
 
 **浏览**
 
+<ClientOnly>
 <input-demo></input-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -23,7 +25,9 @@
 
 **浏览**
 
+<ClientOnly>
 <input-demo-1></input-demo-1>
+</ClientOnly>
 
 **代码演示**
 

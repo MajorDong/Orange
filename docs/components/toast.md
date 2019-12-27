@@ -6,7 +6,9 @@
 
 **浏览**
 
+<ClientOnly>
 <toast-demo></toast-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -52,7 +54,9 @@ methods:{
 
 **浏览**
 
+<ClientOnly>
 <toast-auto-demo></toast-auto-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -90,7 +94,9 @@ methods:{
 
 **浏览**
 
+<ClientOnly>
 <toast-custom-demo></toast-custom-demo>
+</ClientOnly>
 
 **代码演示**
 

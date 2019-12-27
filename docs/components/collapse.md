@@ -8,7 +8,9 @@
 
 设置默认展开第一个，可在 `selectedItem` 数组中设置默认展开多个。
 
+<ClientOnly>
 <collapse-demo></collapse-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -40,7 +42,9 @@ data(){
 
 **浏览**
 
+<ClientOnly>
 <collapse-single-demo></collapse-single-demo>
+</ClientOnly>
 
 **代码演示**
 

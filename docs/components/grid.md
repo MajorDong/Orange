@@ -6,7 +6,9 @@ Grid 网格，最多可分为24网格，可以设置gutter。
 
 **浏览**
 
+<ClientOnly>
 <grid-demo></grid-demo>
+</ClientOnly>
 
 **代码演示**
 
@@ -45,7 +47,9 @@ Grid 网格，最多可分为24网格，可以设置gutter。
 
 **浏览**
 
+<ClientOnly>
 <grid-gutter-demo></grid-gutter-demo>
+</ClientOnly>
 
 **代码演示**
 

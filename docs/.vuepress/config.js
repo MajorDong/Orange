@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/Orange/',
   title: 'Orange UI',
   description: '一个基于Vue2.0的UI框架',
   head: [
