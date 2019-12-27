@@ -93,7 +93,7 @@ data(){
 ```js
 data(){
   return{
-    selectedTab: '1',
+    selectedTab: '2',
   }
 }
 ```

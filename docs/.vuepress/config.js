@@ -3,7 +3,7 @@ module.exports = {
   title: 'Orange UI',
   description: '一个基于Vue2.0的UI框架',
   head: [
-    ['link', { rel: 'icon', href: './public/favicon.ico' }]
+    ['link', { rel: 'icon', href: './favicon.ico' }]
   ],
   themeConfig: {
     nav: [
