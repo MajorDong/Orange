@@ -5,7 +5,7 @@
 
 Orange UI 是一个小型的 UI 框架，提供了一些常用组件，适合桌面端使用。
 
-组件：按钮、输入框、网格、布局、Toast、Tabs、Popover、手风琴
+组件：Button按钮、Input输入框、Grid网格、Layout布局、Toast吐司、Tabs标签页、Popover气泡卡片、Collapse折叠面板
 
 ## 关于Orange
 
@@ -13,7 +13,7 @@ Orange UI 是一个小型的 UI 框架，提供了一些常用组件，适合桌
 希望能对你有用。
 
 ## 部分组件的实现思路
-[官方文档]()
+[实现思路](https://github.com/MajorDong/Orange/issues)
 ## 提问
 [Issues](https://github.com/MajorDong/Orange/issues)
 ## 联系方式
