@@ -17,13 +17,13 @@
 ```html
 <o-collapse :selected.sync="selectedItem">
   <o-collapse-item title="This is panel header 1" name="1">
-    <div>Orange is type of sweet fruit</div>
+    <div>Orange is a kind of fruit</div>
   </o-collapse-item>
   <o-collapse-item title="This is panel header 2" name="2">
-    <div>Orange is type of sweet fruit</div>
+    <div>Orange is a kind of fruit</div>
   </o-collapse-item>
   <o-collapse-item title="This is panel header 3" name="3">
-    <div>Orange is type of sweet fruit</div>
+    <div>Orange is a kind of fruit</div>
   </o-collapse-item>
 </o-collapse>
 ```
@@ -51,13 +51,13 @@ data(){
 ```html
 <o-collapse :selected.sync="selectedItem" single>
   <o-collapse-item title="This is panel header 1" name="1">
-    <div>Orange is type of sweet fruit</div>
+    <div>Orange is a kind of  fruit</div>
   </o-collapse-item>
   <o-collapse-item title="This is panel header 2" name="2">
-    <div>Orange is type of sweet fruit</div>
+    <div>Orange is a kind of fruit</div>
   </o-collapse-item>
   <o-collapse-item title="This is panel header 3" name="3">
-    <div>Orange is type of sweet fruit</div>
+    <div>Orange is a kind of fruit</div>
   </o-collapse-item>
 </o-collapse>
 ```
