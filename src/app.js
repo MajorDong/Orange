@@ -20,9 +20,11 @@ import TabsPane from './tabs-pane.vue'
 import Popover from './popover.vue'
 import Collapse from './collapse.vue'
 import CollapseItem from './collapse-item.vue'
+import ButtonPopple from './button-popple.vue'
 
 Vue.component('o-button', Button)
 Vue.component('o-icon', Icon)
+Vue.component('o-button-popple', ButtonPopple)
 Vue.component('o-button-group',ButtonGroup)
 Vue.component('o-input', Input)
 Vue.component('o-row',Row)
