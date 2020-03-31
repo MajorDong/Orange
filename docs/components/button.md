@@ -20,7 +20,7 @@
   <o-button icon="download">下载</o-button>
 </div>
 ```
-## 单个按钮
+## 涟漪按钮
 
 **浏览**
 
