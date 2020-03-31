@@ -15,7 +15,6 @@ export default {
   components:{
     'o-button': Button,
     'o-button-group': ButtonGroup,
-
   },
   
 }

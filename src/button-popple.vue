@@ -70,7 +70,7 @@ export default {
     border-radius: 50%;
     position: absolute;
     z-index: 0;
-    animation: big 0.7s ease-out;
+    animation: big 0.5s ease-out;
   }
   @keyframes big {
     0%{
