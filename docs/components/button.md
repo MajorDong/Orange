@@ -20,21 +20,6 @@
   <o-button icon="download">下载</o-button>
 </div>
 ```
-## 涟漪按钮
-
-**浏览**
-
-<ClientOnly>
-<button-popple-demo></button-popple-demo>
-</ClientOnly>
-
-**代码演示**
-
-```html
-<div>
-  <o-button-popple>涟漪按钮</o-button-popple>
-</div>
-```
 
 ## 按钮组合
 
